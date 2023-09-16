@@ -1,0 +1,20 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  > * button{
+    width: 90px;
+    height: 40px;
+    padding: 0 10px;
+    border: white 1px solid;
+    border-radius: 5px;
+
+
+    background-color: #3ea9f5; 
+    color: white;
+    
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
