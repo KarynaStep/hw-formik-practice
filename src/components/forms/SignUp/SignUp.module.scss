@@ -1,16 +1,56 @@
-@use '/src/common/styles/_colors' as *;
-@use '/src/common/styles/templates' as *;
+@use "/src/common/styles/_colors" as *;
+@use "/src/common/styles/_templates" as *;
+@use "/src/common/styles/breackpoints" as *;
 
 .form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: auto;
   max-width: 400px;
   min-width: 100px;
+  span {
+    width: 45%;
+    display: inline-block;
+    margin: 10px 10px;
+    text-align: center;
+  }
   button {
     @extend %size-for-item-form;
-
+    width: 95%;
     background-color: $colorGreen;
     color: white;
+    margin-top: 20px;
   }
+  .wrapperError {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+  }
+  .error {
+    position: absolute;
+    left: 2.5%;
+    background-color: #fce4e4;
+    border: 0.5px solid #fcc2c3;
+    float: left;
+    padding: 5px;
+    color: #cc0033;
+    font-size: 0.5rem;
+    font-weight: bold;
+    line-height: 8px;
+    text-align: left;
+  }
+}
+
+@media (max-width: $sm) {
+  .form {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 5px;
+    .error {
+    left: 0;
+  }
+  }
+  
 }

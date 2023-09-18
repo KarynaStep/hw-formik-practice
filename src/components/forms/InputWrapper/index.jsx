@@ -7,7 +7,7 @@ import styles from "./../InputWrapper/InputWrapper.module.scss"
 const InputWrapper = ({ type, name, placeholder, ...options }) => {
   
   return (
-    <span>
+    <span className={styles.wrapper}>
       <Field name={name}>
         {({ field, meta }) => {
           const classNames = cx(styles.input, {
@@ -24,7 +24,7 @@ const InputWrapper = ({ type, name, placeholder, ...options }) => {
         }}
       </Field>
 
-      <ErrorMessage component="span" name={name} className={styles.error} />
+      <ErrorMessage component="div" name={name} className={styles.error} />
     </span>
   );
 };

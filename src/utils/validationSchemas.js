@@ -11,14 +11,14 @@ const PASSWORD_SCHEMA = Yup.string("Value must be string")
   .trim()
   .required("Required!")
   .matches(
-    /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{4,30}$/,
-    "The password must contain: a capital letter, a number, a minimum number of characters 4, a maximum number of characters 30"
+    /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{4,}$/,
+    "The password must contain: a capital letter, a number, a minimum number of characters 4"
   );
 
 const NAME_SCHEMA = Yup.string("Value must be string")
   .trim()
   .required("Required!")
-  .matches(/^[A-Z][a-z]{1,31}$/);
+  .matches(/^[A-Z][a-z]{1,31}$/, "The name must have capital letter");
   
   export const SIGN_UP_USER_SCHEMA = Yup.object({
     firstName: NAME_SCHEMA,

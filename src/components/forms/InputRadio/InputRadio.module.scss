@@ -1,12 +1,29 @@
-@use '/src/common/styles/templates' as *;
+@use "/src/common/styles/templates" as *;
 
-// .input{
-//  @extend %size-for-item-form;
-// }
-// .invalid{
-//   border: red 2px solid;
-// }
-// .input::placeholder{
-//  padding-left: 10px;
-//  font-size: 0.7rem;
-// }
+.label {
+  display: flex;
+  margin-top: 20px;
+  border: white 1px solid;
+  text-align: left;
+  width: 95%;
+  align-items: flex-start;
+  h3 {
+    color: white;
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  p {
+    margin: 5px 0;
+    color: white;
+    font-size: 0.7rem;
+  }
+}
+.inputRadio {
+  display: inline;
+  margin: 10px;
+  color: rgb(159, 72, 72);
+}
+.invalid {
+  border: red 2px solid;
+  background-color: #b33c3c;
+}

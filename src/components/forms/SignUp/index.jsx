@@ -56,21 +56,26 @@ const SignUp = () => {
             name="confirmPassword"
             placeholder="Password confirmation"
           />
-          <InputRadio
-            type="radio"
-            name="picked"
-            value="buyer"
-            title="Join as a buyer"
-            text="I am looking for a name, logo or tagline for my business, brand or product."
+            <InputRadio
+              type="radio"
+              name="picked"
+              value="buyer"
+              title="Join as a buyer"
+              text="I am looking for a name, logo or tagline for my business, brand or product."
           />
-          <ErrorMessage component="span" name="picked" />
-          <InputRadio
-            type="radio"
-            name="picked"
-            value="seller"
-            title="Join as a creative or market place seller"
-            text="I plan to submit name ideas, Logo designs or sell names in Domain Marketplaces"
-          />
+          <span className={style.wrapperError}>
+            <ErrorMessage
+              component="div"
+              name="picked"
+              className={style.error}
+            /></span>
+            <InputRadio
+              type="radio"
+              name="picked"
+              value="seller"
+              title="Join as a creative or market place seller"
+              text="I plan to submit name ideas, Logo designs or sell names in Domain Marketplaces"
+            />
           <button type="submit" value="send">
             Create account
           </button>
