@@ -1,0 +1,29 @@
+@use '/src/common/styles/templates' as *;
+
+
+.wrapper{
+  position: relative;
+  margin-bottom: 25px;
+}
+.input{
+ @extend %size-for-item-form;
+}
+.invalid{
+  border: red 2px solid;
+}
+.input::placeholder{
+ padding-left: 10px;
+ font-size: 0.7rem;
+}
+.error{
+  position: absolute;
+  background-color: #fce4e4;
+  border: 0.5px solid #fcc2c3;
+  float: left;
+  padding: 5px;
+  color: #cc0033;
+  font-size: 0.5rem;
+  font-weight: bold;
+  line-height: 8px;
+  text-align: left;
+}

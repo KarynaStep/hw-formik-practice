@@ -1,0 +1,16 @@
+@use '/src/common/styles/_colors' as *;
+@use '/src/common/styles/templates' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 400px;
+  min-width: 100px;
+  button {
+    @extend %size-for-item-form;
+
+    background-color: $colorGreen;
+    color: white;
+  }
+}
